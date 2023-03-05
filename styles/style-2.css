@@ -1,0 +1,138 @@
+:root {
+    --Primary-Red: hsl(0, 78%, 62%); /*No olvides colocar tanto los dos puntos, despues del nombre de la variable, como el punto y coma al final del valor.*/
+    --Primary-Cyan: hsl(180, 62%, 55%);
+    --Primary-Orange: hsl(34, 97%, 64%);
+    --Primary-blue: hsl(212, 86%, 64%);
+    --Neutral-Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Neutral-Grayish-Blue: hsl(229, 6%, 66%);
+    --Neutral-Very-Light-Gray: hsl(0, 0%, 98%);
+    --sm:14px;
+    --md:15px;
+    --lg:19px;
+}
+body {
+    margin: 0;
+    background-color: var(--Neutral-Very-Light-Gray);
+    font-family: 'Poppins', sans-serif;
+}
+.main-container { /*MEDIA QUERRY*/
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+.text-container { /*MEDIA QUERRY*/
+    width: 499px;
+    margin: 30px 0 60px 340px; /*Posiciona los textos. El tercer valor, que representa al margin-bottom, establece un margen entre el contenedor de texto y el contenedor de cards, otra forma de crear este espaciado es agregando un margen-top a este último.*/
+    text-align: center; /*Centraliza el texto.*/
+}
+.first-title, .title-text {
+    color: var(--Neutral-Very-Dark-Blue);
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+.second-title {
+    color: var(--Neutral-Very-Dark-Blue);
+    margin: 0; /*Elimina el espacio entre los títulos*/
+}
+.title-text {
+    font-size: var(--md);
+    color: var(--Neutral-Grayish-Blue);
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+.cards-container { /*MEDIA QUERRY*/
+    margin-bottom: 30px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+}
+.cards-container h3{
+    font-size: var(--lg);
+    color: var(--Neutral-Very-Dark-Blue);
+}
+.cards-container p{
+    font-size: var(--sm);
+    color: var(--Neutral-Grayish-Blue);
+}
+.cyan-card {
+    width: 330px;
+    height: 220px;
+    margin: 150px 15px 0 15px;
+    padding: 10px 0 0 30px;
+    border-top: 4px solid var(--Primary-Cyan);
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 1px 0 7px 2px hsl(229, 6%, 66%);
+}
+.red-card {
+    width: 330px;
+    height: 220px;
+    margin: 0 15px 15px 15px;
+    padding: 10px 0 0 30px;
+    border-top: 4px solid var(--Primary-Red);
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 1px 0 7px 2px hsl(229, 6%, 66%);
+}
+.orange-card {
+    width: 330px;
+    height: 220px;
+    margin: 30px 15px 0 15px;
+    padding: 10px 0 0 30px;
+    border-top: 4px solid var(--Primary-Orange);
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 1px 0 7px 2px hsl(229, 6%, 66%);
+}
+.blue-card {
+    width: 330px;
+    height: 220px;
+    margin: 150px 15px 0 15px;
+    padding: 10px 0 0 30px;
+    border-top: 4px solid var(--Primary-blue);
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 1px 0 7px 2px hsl(229, 6%, 66%);
+}
+.cyan-card p, .red-card p, .orange-card p, .blue-card p {
+    margin-right: 20px; /*Evita que el texto ocupe todo el ancho de la card, esto lo hice a fin de posicionar la imagen a continuación.*/
+}
+.cyan-card img, .red-card img, .orange-card img, .blue-card img { /*MEDIA QUERRY*/
+    position: relative;
+    left: 236px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@media (max-width: 375px) {
+    body {
+        padding: 0;
+        background-color: #ffffff;
+    }
+    .main-container {
+        margin: 0 0 30px 0;
+        overflow-x: hidden; /*Elimina el movimiento (Scroll) horizontal en la pantalla.*/
+    }
+   .text-container {
+        margin: 60px 10px 50px 10px;
+    }
+    .title-text {
+        padding: 0 90px;
+    }
+    .cards-container {
+        grid-template-columns: none;
+    }
+    .cyan-card {
+        margin-top: 0;
+        width: 290px;
+        height: 227px;
+    }
+    .red-card, .orange-card, .blue-card {
+        margin-top: 25px;
+        width: 290px;
+        height: 227px;
+    }
+    .cyan-card img, .red-card img, .orange-card img, .blue-card img {
+        left: 200px;
+        top: 15px;
+    }
+}
